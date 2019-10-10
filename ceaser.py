@@ -20,4 +20,3 @@ def decrypt_caesar(ciphertext: str, shift: int) -> str:
         result += nchar
     return result
 
-print(decrypt_caesar(encrypt_caesar("PYTHON", 6 ),6))
