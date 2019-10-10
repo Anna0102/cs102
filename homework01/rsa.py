@@ -1,4 +1,5 @@
 import random
+from math import sqrt
 
 
 def is_prime(n):
@@ -12,8 +13,15 @@ def is_prime(n):
     >>> is_prime(8)
     False
     """
-    # PUT YOUR CODE HERE
-    pass
+    if n % 2 == 0 and n != 2 or n == 1:
+        return False
+    x = 3 
+    while x <=  sqrt (n):
+        if n % x == 0:
+            return False
+        else: 
+            x += 2
+    return True
 
 
 def gcd(a, b):
@@ -25,8 +33,12 @@ def gcd(a, b):
     >>> gcd(3, 7)
     1
     """
-    # PUT YOUR CODE HERE
-    pass
+    while a != 0 and b != 0:
+        if a > b:
+            a = a % b
+        else:
+            b = b % a
+    return a + b  
 
 
 def multiplicative_inverse(e, phi):
