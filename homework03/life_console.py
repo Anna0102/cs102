@@ -30,7 +30,7 @@ class Console(UI):
             for j in range(self.life.cols):
                 if self.life.curr_generation[i][j] == 1:
                     screen.addstr(i+1, j+1, '*')
-                else:
+                else: 
                     screen.addstr(i+1, j+1, ' ')
 
     def run(self) -> None:
